@@ -45,9 +45,14 @@ func main() {
 	//依赖病单，通过填写病单，让医生看病
 	//治疗眼睛的病单
 	doctor := new(Doctors)
-	cmdEye := CommandTreatEye{doctor}
+	cmdEye := CommandTreatEye{doctor: doctor}
 	cmdEye.Treat() //通过病单来让医生看病
 
-	cmdNose := CommandTreatNose{doctor}
+	cmdNose := CommandTreatNose{doctor: doctor}
 	cmdNose.Treat() //通过病单来让医生看病
+
+	/*
+		病单和医生解耦
+		这样只要有病单，就可以通过病单来让医生看病
+	*/
 }

@@ -61,7 +61,7 @@ func main() {
 	//治疗鼻子的病单
 	cmdNose := CommandTreatNoses{doctor}
 
-	//护士
+	//护士 收集病单
 	nurse := new(Nurse)
 	//收集管理病单
 	nurse.CmdList = append(nurse.CmdList, &cmdEye)
